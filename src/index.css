@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: hsl(0 0% 18%);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: hsl(0 0% 6%);
+    color: hsl(0 0% 96%);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  ::selection {
+    background-color: hsl(48 92% 55%);
+    color: hsl(0 0% 6%);
+  }
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(0 0% 6%);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(0 0% 18%);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(0 0% 25%);
+  }
+}
+
+@layer components {
+  .label {
+    @apply font-body font-semibold uppercase text-[10px] tracking-label;
+  }
+  .headline {
+    @apply font-headline leading-[0.85];
+  }
+}
+
+@layer utilities {
+  .text-shadow-strong {
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
